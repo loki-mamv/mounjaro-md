@@ -1116,10 +1116,45 @@
                     throw new Error(error.error || 'Request failed');
                 }
                 
-                // Read SSE stream
+                // Smooth streaming with typewriter effect
                 const reader = res.body.getReader();
                 const decoder = new TextDecoder();
                 let fullText = '';
+                let displayedText = '';
+                let renderQueue = [];
+                let isRendering = false;
+                const CHARS_PER_TICK = 3; // Characters to render per tick
+                const TICK_MS = 16; // ~60fps for smooth animation
+                
+                // Smooth render loop - renders characters at steady pace
+                function renderLoop() {
+                    if (renderQueue.length === 0) {
+                        isRendering = false;
+                        return;
+                    }
+                    
+                    // Grab next batch of characters
+                    const batch = renderQueue.splice(0, CHARS_PER_TICK).join('');
+                    displayedText += batch;
+                    responseMsg.querySelector('p').textContent = displayedText;
+                    
+                    // Auto-scroll
+                    getActiveMessagesDiv().scrollTop = getActiveMessagesDiv().scrollHeight;
+                    
+                    requestAnimationFrame(() => setTimeout(renderLoop, TICK_MS));
+                }
+                
+                function queueText(text) {
+                    // Add each character to the render queue
+                    for (const char of text) {
+                        renderQueue.push(char);
+                    }
+                    // Start render loop if not running
+                    if (!isRendering) {
+                        isRendering = true;
+                        renderLoop();
+                    }
+                }
                 
                 while (true) {
                     const { done, value } = await reader.read();
@@ -1137,12 +1172,24 @@
                                 const parsed = JSON.parse(data);
                                 if (parsed.text) {
                                     fullText += parsed.text;
-                                    responseMsg.querySelector('p').textContent = fullText;
+                                    queueText(parsed.text);
                                 }
                             } catch (e) {}
                         }
                     }
                 }
+                
+                // Wait for render queue to finish
+                await new Promise(resolve => {
+                    const checkDone = () => {
+                        if (renderQueue.length === 0 && !isRendering) {
+                            resolve();
+                        } else {
+                            setTimeout(checkDone, 50);
+                        }
+                    };
+                    checkDone();
+                });
                 
                 // Format final response with markdown-like links
                 const formatted = fullText.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
