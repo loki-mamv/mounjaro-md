@@ -42,7 +42,7 @@
           "mainEntityOfPage": {"@id": "https://mounjaro.md/blog/mounjaro-side-effects-management/#article"},
           "wordCount": "697",
           "lastReviewed": "2026-02-18",
-          "reviewedBy": {"@type": "Organization", "name": "thrive.md Clinical Advisory Team"}
+          "reviewedBy": {"@type": "Person", "name": "Dr. Agustin Arrieta", "jobTitle": "MD"}
         },{"@type":"FAQPage","mainEntity":[{"@type": "Question", "name": "How long do Mounjaro side effects last?", "acceptedAnswer": {"@type": "Answer", "text": "Most GI side effects (nausea, diarrhea) are worst in the first 1-2 weeks at each new dose and improve as your body adjusts. Most patients report significant improvement by week 3-4 at a given dose. If side effects persist beyond 4 weeks at a stable dose, talk to your doctor about management strategies or dose adjustment."}}, {"@type": "Question", "name": "Can I take anti-nausea medication with Mounjaro?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Your doctor can prescribe ondansetron (Zofran), which is safe to take with Mounjaro and very effective for nausea. Some patients keep it on hand for dose-increase weeks. Over-the-counter options include Dramamine (less sedating formula) and ginger supplements."}}, {"@type": "Question", "name": "Will Mounjaro make me lose muscle?", "acceptedAnswer": {"@type": "Answer", "text": "Rapid weight loss from any cause involves some muscle loss. Studies suggest 25-40% of weight lost on GLP-1 medications may be lean mass. mounjaro.md strongly recommends resistance training and high protein intake (0.7-1g per pound of body weight) to minimize muscle loss. This is the most important lifestyle modification while on Mounjaro."}}, {"@type": "Question", "name": "Does Mounjaro cause hair loss?", "acceptedAnswer": {"@type": "Answer", "text": "Some patients report hair thinning, likely due to rapid weight loss (telogen effluvium) rather than the medication directly. It's temporary in most cases, with hair regrowing within 3-6 months. Ensure adequate protein, iron, zinc, and biotin intake. If hair loss is significant, your doctor can check thyroid function and nutritional labs."}}]}
       ]
     }
@@ -144,6 +144,11 @@
             .article-header h1 { font-size: 1.75rem; }
             .related-grid { grid-template-columns: 1fr; }
         }
+    
+        /* Medical Reviewer Badge */
+        .medical-reviewer { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.75rem; padding: 0.5rem 0.75rem; background: #f0fdfa; border: 1px solid #ccfbf1; border-radius: 6px; font-size: 0.8rem; color: #0f766e; width: fit-content; }
+        .medical-reviewer svg { flex-shrink: 0; }
+        .medical-disclaimer { font-size: 0.75rem; color: var(--text-muted, #94a3b8); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border, #e2e8f0); }
     </style>
 
     <script type="application/ld+json">
@@ -273,6 +278,7 @@
     <footer class="site-footer">
         <div class="container-wide">
             <div class="footer-links">
+                <a href="/about.html">About &amp; Editorial Policy</a>
                 <a href="https://thrive.md">thrive.md</a>
                 <a href="https://anxiety.md">anxiety.md</a>
                 <a href="https://depression.md">depression.md</a>

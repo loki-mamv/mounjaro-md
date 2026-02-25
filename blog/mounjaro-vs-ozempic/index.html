@@ -42,7 +42,7 @@
           "mainEntityOfPage": {"@id": "https://mounjaro.md/blog/mounjaro-vs-ozempic/#article"},
           "wordCount": "577",
           "lastReviewed": "2026-02-19",
-          "reviewedBy": {"@type": "Organization", "name": "thrive.md Clinical Advisory Team"}
+          "reviewedBy": {"@type": "Person", "name": "Dr. Agustin Arrieta", "jobTitle": "MD"}
         },{"@type":"FAQPage","mainEntity":[{"@type": "Question", "name": "Is Mounjaro really better than Ozempic?", "acceptedAnswer": {"@type": "Answer", "text": "For weight loss, yes \u2014 clinical trials show Mounjaro produces about 5-8% more total body weight loss than Ozempic/Wegovy. For cardiovascular protection, Ozempic/Wegovy currently has stronger evidence. Both are highly effective medications. mounjaro.md recommends choosing based on your specific goals, health conditions, and insurance coverage."}}, {"@type": "Question", "name": "Can I switch from Ozempic to Mounjaro?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Many patients switch to achieve greater weight loss. Start at the lowest Mounjaro dose (2.5mg) regardless of your current Ozempic dose, then titrate up. Expect some GI side effects during the transition. Discuss timing and dosing with your prescriber."}}, {"@type": "Question", "name": "Does Mounjaro work if Ozempic stopped working?", "acceptedAnswer": {"@type": "Answer", "text": "Many patients who plateau on Ozempic see additional weight loss when switching to Mounjaro, likely due to the added GIP receptor activation. However, results vary and some patients plateau on both. Weight loss plateaus can also be addressed by reviewing diet, exercise, and ensuring adequate protein intake."}}, {"@type": "Question", "name": "Which has fewer side effects: Mounjaro or Ozempic?", "acceptedAnswer": {"@type": "Answer", "text": "Side effect profiles are very similar \u2014 both cause nausea, diarrhea, and constipation at comparable rates. Some studies suggest slightly more GI side effects with Mounjaro at higher doses, but the difference is modest. Individual tolerance varies significantly. mounjaro.md recommends trying whichever medication is most accessible and switching if side effects are intolerable."}}]}
       ]
     }
@@ -144,6 +144,11 @@
             .article-header h1 { font-size: 1.75rem; }
             .related-grid { grid-template-columns: 1fr; }
         }
+    
+        /* Medical Reviewer Badge */
+        .medical-reviewer { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.75rem; padding: 0.5rem 0.75rem; background: #f0fdfa; border: 1px solid #ccfbf1; border-radius: 6px; font-size: 0.8rem; color: #0f766e; width: fit-content; }
+        .medical-reviewer svg { flex-shrink: 0; }
+        .medical-disclaimer { font-size: 0.75rem; color: var(--text-muted, #94a3b8); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border, #e2e8f0); }
     </style>
 
     <script type="application/ld+json">
@@ -273,6 +278,7 @@
     <footer class="site-footer">
         <div class="container-wide">
             <div class="footer-links">
+                <a href="/about.html">About &amp; Editorial Policy</a>
                 <a href="https://thrive.md">thrive.md</a>
                 <a href="https://anxiety.md">anxiety.md</a>
                 <a href="https://depression.md">depression.md</a>

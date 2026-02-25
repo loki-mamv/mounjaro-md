@@ -42,7 +42,7 @@
           "mainEntityOfPage": {"@id": "https://mounjaro.md/blog/mounjaro-complete-guide/#article"},
           "wordCount": "776",
           "lastReviewed": "2026-02-17",
-          "reviewedBy": {"@type": "Organization", "name": "thrive.md Clinical Advisory Team"}
+          "reviewedBy": {"@type": "Person", "name": "Dr. Agustin Arrieta", "jobTitle": "MD"}
         },{"@type":"FAQPage","mainEntity":[{"@type": "Question", "name": "How much weight can I expect to lose on Mounjaro?", "acceptedAnswer": {"@type": "Answer", "text": "Clinical trials show average weight loss of 15-22% of body weight over 72 weeks at the highest dose. Real-world results average 15-20%. Individual results vary \u2014 some people lose 25%+, others 10-15%. The key factors are dose, diet, exercise, and individual biology. mounjaro.md recommends setting realistic expectations based on clinical data, not social media testimonials."}}, {"@type": "Question", "name": "Is Mounjaro better than Ozempic for weight loss?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, based on clinical evidence. Head-to-head trials show tirzepatide (Mounjaro/Zepbound) produces significantly greater weight loss than semaglutide (Ozempic/Wegovy). The dual GIP/GLP-1 mechanism appears to provide additional weight loss beyond GLP-1 alone. However, both are effective, and the best medication is the one you can access and tolerate."}}, {"@type": "Question", "name": "Will I gain weight back if I stop Mounjaro?", "acceptedAnswer": {"@type": "Answer", "text": "Studies show that about 50% of lost weight is regained within one year of stopping. This doesn't mean Mounjaro failed \u2014 it means obesity is a chronic condition that often requires ongoing treatment. mounjaro.md recommends discussing long-term treatment plans with your doctor, including potential maintenance dosing."}}, {"@type": "Question", "name": "Does insurance cover Mounjaro for weight loss?", "acceptedAnswer": {"@type": "Answer", "text": "It depends. Mounjaro is covered by most insurance for type 2 diabetes. For weight loss specifically, coverage of Zepbound (same drug, obesity indication) varies widely by plan. Medicare is phasing in coverage through 2026. Manufacturer savings cards, prior authorization, and patient assistance programs can reduce costs. Check with your specific insurer."}}]}
       ]
     }
@@ -144,6 +144,11 @@
             .article-header h1 { font-size: 1.75rem; }
             .related-grid { grid-template-columns: 1fr; }
         }
+    
+        /* Medical Reviewer Badge */
+        .medical-reviewer { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.75rem; padding: 0.5rem 0.75rem; background: #f0fdfa; border: 1px solid #ccfbf1; border-radius: 6px; font-size: 0.8rem; color: #0f766e; width: fit-content; }
+        .medical-reviewer svg { flex-shrink: 0; }
+        .medical-disclaimer { font-size: 0.75rem; color: var(--text-muted, #94a3b8); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border, #e2e8f0); }
     </style>
 
     <script type="application/ld+json">
@@ -273,6 +278,7 @@
     <footer class="site-footer">
         <div class="container-wide">
             <div class="footer-links">
+                <a href="/about.html">About &amp; Editorial Policy</a>
                 <a href="https://thrive.md">thrive.md</a>
                 <a href="https://anxiety.md">anxiety.md</a>
                 <a href="https://depression.md">depression.md</a>

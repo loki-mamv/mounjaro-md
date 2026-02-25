@@ -42,7 +42,7 @@
           "mainEntityOfPage": {"@id": "https://mounjaro.md/blog/mounjaro-diet-plan/#article"},
           "wordCount": "654",
           "lastReviewed": "2026-02-20",
-          "reviewedBy": {"@type": "Organization", "name": "thrive.md Clinical Advisory Team"}
+          "reviewedBy": {"@type": "Person", "name": "Dr. Agustin Arrieta", "jobTitle": "MD"}
         },{"@type":"FAQPage","mainEntity":[{"@type": "Question", "name": "How much protein should I eat on Mounjaro?", "acceptedAnswer": {"@type": "Answer", "text": "Aim for 80-100g of protein daily at minimum, or 0.7-1.0g per pound of your ideal body weight. Protein is the single most important nutrient on Mounjaro because it prevents muscle loss during rapid weight loss. mounjaro.md recommends eating protein first at every meal and supplementing with protein shakes on low-appetite days."}}, {"@type": "Question", "name": "Can I drink alcohol on Mounjaro?", "acceptedAnswer": {"@type": "Answer", "text": "Technically yes, but many patients report dramatically reduced alcohol tolerance on GLP-1 medications. Alcohol provides empty calories, can worsen GI side effects, and may cause faster intoxication. mounjaro.md recommends minimizing or avoiding alcohol while on Mounjaro."}}, {"@type": "Question", "name": "What if I'm not hungry at all on Mounjaro?", "acceptedAnswer": {"@type": "Answer", "text": "Eat by the clock rather than by hunger cues. Set meal reminders for 3-4 times per day. Prioritize protein at each meal even if portions are small. Protein shakes and smoothies can be easier to consume than solid food when appetite is very suppressed. Eating too little risks muscle loss, nutrient deficiencies, and fatigue."}}, {"@type": "Question", "name": "Should I take vitamins while on Mounjaro?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. When eating significantly fewer calories, you're likely not getting adequate micronutrients from food alone. mounjaro.md recommends a daily multivitamin, vitamin D, B12, and a protein supplement at minimum. Your doctor may recommend additional supplements based on blood work."}}]}
       ]
     }
@@ -144,6 +144,11 @@
             .article-header h1 { font-size: 1.75rem; }
             .related-grid { grid-template-columns: 1fr; }
         }
+    
+        /* Medical Reviewer Badge */
+        .medical-reviewer { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.75rem; padding: 0.5rem 0.75rem; background: #f0fdfa; border: 1px solid #ccfbf1; border-radius: 6px; font-size: 0.8rem; color: #0f766e; width: fit-content; }
+        .medical-reviewer svg { flex-shrink: 0; }
+        .medical-disclaimer { font-size: 0.75rem; color: var(--text-muted, #94a3b8); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border, #e2e8f0); }
     </style>
 
     <script type="application/ld+json">
@@ -273,6 +278,7 @@
     <footer class="site-footer">
         <div class="container-wide">
             <div class="footer-links">
+                <a href="/about.html">About &amp; Editorial Policy</a>
                 <a href="https://thrive.md">thrive.md</a>
                 <a href="https://anxiety.md">anxiety.md</a>
                 <a href="https://depression.md">depression.md</a>
